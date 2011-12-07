@@ -24,7 +24,7 @@ calendar:datetime_to_gregorian_seconds( {{1970,1,1},{0,0,0}} ).`
 -behaviour(sql_migration). %% this line is important
 
 upgrade(C) ->
-   pgsql:squery(C, "CREATE TABLE a").
+   pgsql:squery(C, "CREATE TABLE a ()").
 
 downgrade(C) ->
    pgsql:squery(C, "DROP TABLE a").
