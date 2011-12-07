@@ -1,0 +1,11 @@
+{application, sqlmig,
+ [
+  {description, "SQL migration toolkit"},
+  {vsn, git},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
