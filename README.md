@@ -13,7 +13,10 @@ Use
 In order to use the tool one writes 'migration' modules. Most important
 thing here is to name in the order of their versioning. Our suggestion
 is to use `[timestamp]_name.erl` format. One can generate timestamps
-with `date +%s` shell command.
+with `date +%s` shell command. Erlang equivalent is
+`calendar:datetime_to_gregorian_seconds(
+calendar:now_to_universal_time(now()) ) -
+calendar:datetime_to_gregorian_seconds( {{1970,1,1},{0,0,0}} ).`
 
 ```erlang
 -module(1323220832_add_table).
