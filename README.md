@@ -18,6 +18,7 @@ with `date +%s` shell command.
 ```erlang
 -module(1323220832_add_table).
 -export([upgrade/1, downgrade/1]).
+-behaviour(sql_migration). %% this line is important
 
 upgrade(C) ->
    pgsql:squery(C, "CREATE TABLE a").
