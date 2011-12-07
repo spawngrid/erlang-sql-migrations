@@ -40,7 +40,7 @@ source code.
 In your application, this is how you use sqlmig:
 
 ```erlang
-Migs = sql_migration:migrations(htapi),
+Migs = sql_migration:migrations(myapp),
 sql_migration:migrate(Conn, hd(lists:reverse(Migs)), Migs).
 ```
 
